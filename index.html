@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let userInputAge = prompt("Якого ви року народження ?");
+    if (userInputAge === null || userInputAge === ''){
+        alert("шкода що ви не захотіли вводити свою дату народження");
+    }
+    let userInputCity = prompt("з якого ви міста ?");
+    if (userInputCity === null || userInputAge === ''){
+        alert("шкода що ви не захотіли вводити своє місто");
+    }
+    let userInputSport = prompt("який ваш улюблений вид спорту ?");
+    if (userInputSport === null || userInputAge === ''){
+        alert("шкода що ви не захотіли вводити свій улюбленний спорт");
+    }
+
+    let userAge = 2023 - userInputAge;
+    if (userInputAge === null || userInputAge === '') {
+        userAge = "ви не ввели свій рік народження";
+    }
+
+    let userCity;
+    if (userInputCity === null || userInputCity ===''){
+        userCity = "ви не ввели своє місто";
+    }
+    else if (userInputCity === 'Вашингтон'){
+        userCity =("Ти живеш в Столиці США");
+    }
+    else if (userInputCity === 'Варшава'){
+        userCity =("Ти живеш в столиці Польші");
+    }
+    else if (userInputCity === 'Київ'){
+        userCity =("Ти живеш в столиці України");
+    }
+    else if ( userInputCity !== '...'){
+        userCity =(`Ти живеш в місті ${userInputCity}`);
+    }
+
+    let userSport = userInputSport;
+    if (userInputSport === null || userInputSport === ''){
+        userSport =("ви не ввели свій улюбленний спорт");
+    }
+
+    alert(`${userAge} , ${userCity} , ${userSport}`);
+
+</script>
+</body>
+</html>
